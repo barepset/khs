@@ -18,9 +18,17 @@
 
     <style type="text/css">
 
+        @media print{
+
+            .sks{
+            display:none;
+            }
+
+        }
+
         @page {
             size: auto;   /* auto is the initial value */
-            margin: 5;  /* this affects the margin in the printer settings */
+            margin: 0;  /* this affects the margin in the printer settings */
         }
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -537,7 +545,7 @@
                     <th width="40">SKS</th>
                     <th width="40">Nilai</th>
                 </tr>
-			                <tr>
+                            <tr>
                     <td>1</td>
                     <td>DT022</td>
                     <td class="tl">PENGOLAHAN BASIS DATA<br><em>DATABASE MANAGEMENT                                       </em></td>
