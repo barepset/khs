@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)http://krs.amikom.ac.id/index.php/cetak/khs/1/2016/2017 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><link type="text/css" id="dark-mode" rel="stylesheet" href=""><style type="text/css" id="dark-mode-custom-style"></style><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Kartu Hasil Studi - UNIVERSITAS AMIKOM Yogyakarta</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style type="text/css">
+    @media print {
+    a:after { content:''; }
+    a[href]:after { content: none !important; }
+
+}
+
+        /*@media print{
+
+            .sks{
+            display:none;
+            }
+
+        }
+*/
+        @page {
+            size: auto;   /* auto is the initial value */
+            margin: 5;  /* this affects the margin in the printer settings */
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+        }
+        
+        .krs_box {
+            border: 1px solid #000;
+        }
+        
+        .krs_box * {
+            text-align: center;
+            padding: 0 1px;
+        }
+        
+        .krs_box td,
+        .krs_box th {
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        
+        .krs_box th {
+            font-size: 12px;
+        }
+        
+        .tl {
+            text-align: left;
+            padding-left: 10px
+        }
+        
+        .tc {
+            text-align: center;
+        }
+        
+        .tr {
+            text-align: right;
+        }
+        
+        .tj {
+            text-align: justify;
+        }
+        
+        .fb {
+            font-weight: bold;
+        }
+        
+        .line {
+            border-bottom: 1px dashed #000;
+            clear: both;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#input").show();
+            $(".sks").hide();
+
+            $("#masukan").click(function(){
+                 
+    
+                var nama = $('#nama').val();
+                $("#nama1").html(nama.toUpperCase());
+
+                var nim = $('#nim').val();
+                $("#nim1").html(nim);
+                var nilai1 = $('#nilai1').val();
+                var nilai2 = $('#nilai2').val();
+                var nilai3 = $('#nilai3').val();
+                var nilai4 = $('#nilai4').val();
+                var nilai5 = $('#nilai5').val();
+                var nilai6 = $('#nilai6').val();
+                var nilai7 = $('#nilai7').val();
+                var nilai8 = $('#nilai8').val();
+                var nilai9 = $('#nilai9').val();
+                var nilai10 = $('#nilai10').val();
+                var nilai11 = $('#nilai11').val();
+
+                if ( nama == "" || nim == "" || nilai1 == "" || nilai3 == "" || nilai2 == "" || nilai4 == "" || nilai5 == "" || nilai6 == "" || nilai8 == "" || nilai9 == "" || nilai10 == "" || nilai11 == ""){
+                    alert("Di isi semua yaaa");
+                    $("#input").show();
+                    $(".sks").hide();
+                    
+                }else {
+                $("#input").hide();
+                $(".sks").show();
+
+            
+
+                if (nilai1 == 4){
+                    $('#tampilnilai1').html("A");
+                } else if (nilai1 == 3) {
+                    $('#tampilnilai1').html("B");
+                } else if (nilai1 == 2) {
+                    $('#tampilnilai1').html("C");
+                } else if (nilai1 == 1) {
+                    $('#tampilnilai1').html("D");
+                } else {
+                    $('#tampilnilai1').html("E");
+                }
+
+                if (nilai2 == 4){
+                    $('#tampilnilai2').html("A");
+                } else if (nilai2 == 3) {
+                    $('#tampilnilai2').html("B");
+                } else if (nilai2 == 2) {
+                    $('#tampilnilai2').html("C");
+                } else if (nilai2 == 1) {
+                    $('#tampilnilai2').html("D");
+                } else {
+                    $('#tampilnilai2').html("E");
+                }
+
+                if (nilai3 == 4){
+                    $('#tampilnilai3').html("A");
+                } else if (nilai3 == 3) {
+                    $('#tampilnilai3').html("B");
+                } else if (nilai3 == 2) {
+                    $('#tampilnilai3').html("C");
+                } else if (nilai3 == 1) {
+                    $('#tampilnila3').html("D");
+                } else {
+                    $('#tampilnilai3').html("E");
+                }
+
+                if (nilai4 == 4){
+                    $('#tampilnilai4').html("A");
+                } else if (nilai4 == 3) {
+                    $('#tampilnilai4').html("B");
+                } else if (nilai4 == 2) {
+                    $('#tampilnilai4').html("C");
+                } else if (nilai4 == 1) {
+                    $('#tampilnilai4').html("D");
+                } else {
+                    $('#tampilnilai4').html("E");
+                }
+                
+                if (nilai5 == 4){
+                    $('#tampilnilai5').html("A");
+                } else if (nilai5 == 3) {
+                    $('#tampilnilai5').html("B");
+                } else if (nilai5 == 2) {
+                    $('#tampilnilai5').html("C");
+                } else if (nilai5 == 1) {
+                    $('#tampilnilai5').html("D");
+                } else {
+                    $('#tampilnilai5').html("E");
+                }
+
+                if (nilai6 == 4){
+                    $('#tampilnilai6').html("A");
+                } else if (nilai6 == 3) {
+                    $('#tampilnilai6').html("B");
+                } else if (nilai6 == 2) {
+                    $('#tampilnilai6').html("C");
+                } else if (nilai6 == 1) {
+                    $('#tampilnilai6').html("D");
+                } else {
+                    $('#tampilnila6').html("E");
+                }
+
+                if (nilai7 == 4){
+                    $('#tampilnilai7').html("A");
+                } else if (nilai7 == 3) {
+                    $('#tampilnilai7').html("B");
+                } else if (nilai7 == 2) {
+                    $('#tampilnilai7').html("C");
+                } else if (nilai7 == 1) {
+                    $('#tampilnilai7').html("D");
+                } else {
+                    $('#tampilnila7').html("E");
+                }
+
+                if (nilai8 == 4){
+                    $('#tampilnilai8').html("A");
+                } else if (nilai8 == 3) {
+                    $('#tampilnilai8').html("B");
+                } else if (nilai8 == 2) {
+                    $('#tampilnilai8').html("C");
+                } else if (nilai8 == 1) {
+                    $('#tampilnilai8').html("D");
+                } else {
+                    $('#tampilnilai8').html("E");
+                }
+
+                if (nilai9 == 4){
+                    $('#tampilnilai9').html("A");
+                } else if (nilai9 == 3) {
+                    $('#tampilnilai9').html("B");
+                } else if (nilai9 == 2) {
+                    $('#tampilnilai9').html("C");
+                } else if (nilai9 == 1) {
+                    $('#tampilnilai9').html("D");
+                } else {
+                    $('#tampilnilai9').html("E");
+                }
+
+                if (nilai10 == 4){
+                    $('#tampilnilai10').html("A");
+                } else if (nilai10 == 3) {
+                    $('#tampilnilai10').html("B");
+                } else if (nilai10 == 2) {
+                    $('#tampilnilai10').html("C");
+                } else if (nilai10 == 1) {
+                    $('#tampilnilai10').html("D");
+                } else {
+                    $('#tampilnilai10').html("E");
+                }
+
+                if (nilai11 == 4){
+                    $('#tampilnilai11').html("A");
+                } else if (nilai11 == 3) {
+                    $('#tampilnilai11').html("B");
+                } else if (nilai11 == 2) {
+                    $('#tampilnilai11').html("C");
+                } else if (nilai11 == 1) {
+                    $('#tampilnilai11').html("D");
+                } else {
+                    $('#tampilnilai11').html("E");
+                }
+
+
+                var ip = ((nilai1*2) + (nilai2 * 2) + (nilai3 * 4) + (nilai4 * 2) + (nilai5 * 2) + (nilai6 * 2) + (nilai7 * 2) + (nilai8 * 2) + (nilai9 * 2) + (nilai10 * 2) + (nilai11) * 2) / 24 ;
+                $('#ip').html(ip.toFixed(2));
+
+            };
+                           
+
+
+        });
+
+    });
+
+    $(window).on('load',function(){
+        $( "#dialog" ).dialog();
+    });
+
+
+
+         
+
+
+
+
+
+    </script>
+    <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghnilai8oeflnamj/ng-inspector.js"></script>
+</head>
+
+<body cz-shortcut-listen="true">
+    <div id="dialog" title="CARA PENGISIAN">
+  <p><b>PERHATIAN!</b><br>
+            <ul>
+                <li>1. Isikan Form <i>Nilai</i> dengan Angka: 1 - 4<br>
+                    Jika nilai A maka isikan 4<br>
+                    Jika nilai B maka isikan 3<br>
+                    Jika nilai C maka isikan 2<br>
+                    Jika nilai D maka isikan 1<br>
+                    Jika nilai E maka isikan 0<br>
+                </li>
+                <li>2. Form harus terisi semua</li>
+                <li>3. Pastikan Data yang di inputkan BENAR</li>
+                <li>4. Jika Semua telah diisi dengan benar, maka klik submit kemudian klik<i>cetak</i></li>
+                <li>5. Sebelum<i>cetak</i> pastikan <b>BOX</b> di close dahulu dengan menekan tombol 'x' di pojok kanan atas</li>
+            </ul>
+        </p>
+</div>
+
+
+    
+<div id="input">                                                                                                                              
+    <div style="margin:0 auto;width:800px;">
+        <br><br>
+        <form action="" method="post" id="form">
+        <table cellspacing="0" cellpadding="0" border="0" width="800" align="center">
+            <tbody>
+                <tr>
+                    <td><img src="http://krs.amikom.ac.id/images/amikom-new.png" width="50"></td>
+                    <td style="font-weight:bold;text-align:center;" width="350">
+                        <!--<div style="font-size:11px;">SEKOLAH TINGGI MANAJEMEN INFORMATIKA DAN KOMPUTER</div>-->
+                        <div style="font-size:16px;font-family:Times New Roman,Times,serif">UNIVERSITAS AMIKOM</div>
+                        <div style="font-size:12px;">YOGYAKARTA</div>
+                    </td>
+                    <td style="font-size:11px;text-align:right;" valign="top">
+                        <div style="font-weight: bold;">KAMPUS TERPADU</div>
+                        <div>Jl. Ring Road Utara, Condong Catur, Depok, Sleman
+                            <br>Telp. (0274)884201 - 206, Faks : (0274)884208</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <table cellspacing="0" cellpadding="0" border="0" width="800" align="center">
+            <tbody>
+                <tr>
+                    <td colspan="3"><strong>KARTU HASIL STUDI</strong></td>
+                    <td width="120">TAHUN AKADEMIK</td>
+                    <td width="12">:</td>
+                    <td>2017/2018</td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input type="text" id="nama" required=""></td>
+                    <td>Semester</td>
+                    <td>:</td>
+                    <td>Ganjil</td>
+                </tr>
+                <tr>
+                    <td width="80">NPM</td>
+                    <td width="12">:</td>
+                    <td width="470"><input type="text" id="nim" required=""></td>
+                    <td>Tanggal / IP</td>
+                    <td>:</td>
+                    <td width="270">
+                        <script type="text/javascript">
+                            var date = new Date();
+                            var bulan = "";
+                            var month = date.getMonth() + 1;
+                            if (month < 10) {bulan = '0'+ month;} else {bulan = ''+month};    
+                            var  jam = date.getHours();
+                            var menit = date.getMinutes();
+                            var detik = date.getSeconds();
+                            var day = date.getDate();
+                            var yy = date.getYear();
+                            var year = (yy < 1000) ? yy + 1900 : yy;
+                            document.write(year+"-"+bulan+"-"+day+ " "+jam+":"+menit+":"+detik ); 
+
+                        </script> / <script type="application/javascript">
+  function getIP(json) {
+    document.write(json.ip);
+  }
+</script>
+<script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script></td>
+                </tr>
+                <tr>
+                    <td>Jurusan</td>
+                    <td>:</td>
+                    <td>S1 Geografis
+                    <td>Tanggal Update</td>
+                    <td>:</td>
+                    <td>0</td>
+                </tr>
+                <!--
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>:</td>
+                    <td>2016-0625 11:11:00</td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+        <br>
+        <table class="krs_box" cellspacing="0" cellpadding="0" border="0" width="550" align="center">
+            <tbody>
+                <tr>
+                    <th width="30">NO</th>
+                    <th width="60">KODE</th>
+                    <th>MATAKULIAH</th>
+                    <th width="40">SKS</th>
+                    <th width="40">Nilai</th>
+                </tr>
+                            <tr>
+                    <td>1</td>
+                    <td>GF001</td>
+                    <td class="tl">BAHASA INGGRIS 1<br><em>ENGLISH 1                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai1" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>2</td>
+                    <td>GF002</td>
+                    <td class="tl">ETIKA PROFESI<br><em>PROFESSION ETHICS                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai2" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>3</td>
+                    <td>GF003</td>
+                    <td class="tl">KARTOGRAFI DASAR<br><em>BASIC CARTOGRAPHY                                       </em></td>
+                    <td>4</td>
+                    <td><input type="text" id="nilai3" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>4</td>
+                    <td>GF004</td>
+                    <td class="tl">ALGORITMA KOMPUTER<br><em>COMPUTING ALGORITM                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai4" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>5</td>
+                    <td>GF005</td>
+                    <td class="tl">PENGANTAR GEOGRAFI<br><em>INTRODUCTION TO GEOGRAPHY                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai5" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>6</td>
+                    <td>GF006</td>
+                    <td class="tl">GEOLOGI DASAR<br><em>GENERAL GEOLOGY                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai6" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>7</td>
+                    <td>GF007</td>
+                    <td class="tl">LINGKUNGAN BISNIS<br><em>BUSINESS ENVIRONMENT                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai7" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>8</td>
+                    <td>GF008</td>
+                    <td class="tl">FOTOGRAFI<br><em>PHOTOGRAPHY                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai8" size="5" required=""></td>
+                </tr>
+<tr>
+                    <td>9</td>
+                    <td>GF009</td>
+                    <td class="tl">KEWIRAUSAHAAN<br><em>ENTERPRENEURSHIP                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai9" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>10</td>
+                    <td>GF010</td>
+                    <td class="tl">PENGANTAR GEOSPASIAL<br><em>INTRODUCTION TO GEOSPATIAL                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai10" size="5" required=""></td>
+                </tr>
+                        <tr>
+                    <td>11</td>
+                    <td>GF011</td>
+                    <td class="tl">GEOGRAFI SOSIAL<br><em>SOCIAL GEOGRAPHY                                       </em></td>
+                    <td>2</td>
+                    <td><input type="text" id="nilai11" size="5" required=""></td>
+                </tr>
+                    <tr>
+                    <th class="tr" colspan="3">Jumlah SKS</th>
+                    <th class="tc" colspan="2" id="sks">24</th>
+                </tr>
+                <tr>
+                    <th class="tr" colspan="3">Indek Prestasi</th>
+                    <th class="tc" colspan="2"></th>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <div align="center">
+            Yogyakarta, 24  Januari  2018<br> DAAK<br>
+            <img src="http://krs.amikom.ac.id/images/ttd-kabag-baak.png" width="150"><br> ( Armadyah Amborowati, S.Kom, M.Eng )
+        </div>
+        <br><br>
+    </div>
+    <div style="text-align:center;" class="tc"><input type="button" id="masukan" onclick="klik();" value="SUBMIT"></div>
+    <br><br>
+
+
+
+<script id="wappalyzer" src="khs_files/inject.js"></script>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BATESSSSSSSSSSSSSSSS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="sks">
+        <div style="margin:0 auto;width:800px;">
+        <br><br>
+        <table cellspacing="0" cellpadding="0" border="0" width="800" align="center">
+            <tbody>
+                <tr>
+                    <td><img src="http://krs.amikom.ac.id/images/amikom-new.png" width="50"></td>
+                    <td style="font-weight:bold;text-align:center;" width="350">
+                        <!--<div style="font-size:11px;">SEKOLAH TINGGI MANAJEMEN INFORMATIKA DAN KOMPUTER</div>-->
+                        <div style="font-size:16px;font-family:Times New Roman,Times,serif">UNIVERSITAS AMIKOM</div>
+                        <div style="font-size:12px;">YOGYAKARTA</div>
+                    </td>
+                    <td style="font-size:11px;text-align:right;" valign="top">
+                        <div style="font-weight: bold;">KAMPUS TERPADU</div>
+                        <div>Jl. Ring Road Utara, Condong Catur, Depok, Sleman
+                            <br>Telp. (0274)884201 - 206, Faks : (0274)884208</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <table cellspacing="0" cellpadding="0" border="0" width="800" align="center">
+            <tbody>
+                <tr>
+                    <td colspan="3"><strong>KARTU HASIL STUDI</strong></td>
+                    <td width="120">TAHUN AKADEMIK</td>
+                    <td width="12">:</td>
+                    <td>2017/2018</td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td id="nama1"></td>
+                    <td>Semester</td>
+                    <td>:</td>
+                    <td>Ganjil</td>
+                </tr>
+                <tr>
+                    <td width="80">NPM</td>
+                    <td width="12">:</td>
+                    <td width="470" id="nim1"></td>
+                    <td>Tanggal / IP</td>
+                    <td>:</td>
+                    <td width="270">
+                        <script type="text/javascript">
+                            var date = new Date();
+                            var bulan = "";
+                            var month = date.getMonth() + 1;
+                            if (month < 10) {bulan = '0'+ month;} else {bulan = ''+month};    
+                            var  jam = date.getHours();
+                            var menit = date.getMinutes();
+                            var detik = date.getSeconds();
+                            var day = date.getDate();
+                            var yy = date.getYear();
+                            var year = (yy < 1000) ? yy + 1900 : yy;
+                            document.write(year+"-"+bulan+"-"+day+ " "+jam+":"+menit+":"+detik ); 
+
+                        </script> / <script type="application/javascript">
+  function getIP(json) {
+    document.write(json.ip);
+  }
+</script>
+<script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script></td>
+                </tr>
+                <tr>
+                    <td>Jurusan</td>
+                    <td>:</td>
+                    <td>S1 Geografis</td>
+                    <td>Tanggal Update</td>
+                    <td>:</td>
+                    <td>0</td>
+                </tr>
+                <!--
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>:</td>
+                    <td>2016-0625 11:11:00</td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+        <br>
+        <table class="krs_box" cellspacing="0" cellpadding="0" border="0" width="550" align="center">
+            <tbody>
+                <tr>
+                    <th width="30">NO</th>
+                    <th width="60">KODE</th>
+                    <th>MATAKULIAH</th>
+                    <th width="40">SKS</th>
+                    <th width="40">Nilai</th>
+                </tr>
+                            <tr>
+                    <td>1</td>
+                    <td>GF001</td>
+                    <td class="tl">BAHASA INGGRIS 1<br><em>ENGLISH 1                                       </em></td>
+                    <td>2</td>
+                    <td id="tampilnilai1"></td>
+                </tr>
+                        <tr>
+                    <td>2</td>
+                    <td>GF002</td>
+                    <td class="tl">ETIKA PROFESI<br><em>PROFESSION ETHICS                                       </em></td>
+                    <td>2</td>
+                    <td id="tampilnilai2"></td>
+                </tr>
+                        <tr>
+                    <td>3</td>
+                    <td>GF003</td>
+                    <td class="tl">KARTOGRAFI DASAR<br><em>BASIC CARTOGRAPHY                                       </em></td>
+                    <td>4</td>
+                    <td id="tampilnilai3"></td>
+                </tr>
+                        <tr>
+                    <td>4</td>
+                    <td>GF004</td>
+                    <td class="tl">ALGORITMA KOMPUTER<br><em>COMPUTING ALGORITM                                       </em></td>
+                    <td>2</td>
+                    <td id="tampilnilai4">A</td>
+                </tr>
+                        <tr>
+                    <td>5</td>
+                    <td>GF005</td>
+                    <td class="tl">PENGANTAR GEOGRAFI<br><em>INTRODUCTION TO GEOGRAPHY                                       </em></td>
+                    <td>2</td>
+                    <td id="tampilnilai5"></td>
+                </tr>
+                        <tr>
+                    <td>6</td>
+                    <td>GF006</td>
+                    <td class="tl">GEOLOGI DASAR<br><em>GENERAL GEOLOGY                                       </em></td>
+                    <td>2</td>
+                    <td id="tampilnilai6"></td>
+                </tr>
+                        <tr>
+                    <td>7</td>
+                    <td>GF007</td>
+                    <td class="tl">LINGKUNGAN BISNIS<br><em>BUSINESS ENVIRONMENT                                       </em></td>
+                    <td>2</td>
+                    <td id="tampilnilai7"></td>
+                </tr>
+                        <tr>
+                    <td>8</td>
+                    <td>GF008</td>
+                    <td class="tl">FOTOGRAFI<br><em>PHOTOGRAPHY                                       </em></td>
+                    <td>2</td>
+                    <td id="tampilnilai8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>GF009</td>
+                    <td class="tl">KEWIRAUSAHAAN<br><em>ENTERPRENEURSHIP                                       </em></td>
+                    <td>2</td>
+                    <td  id="tampilnilai9" ></td>
+                </tr>
+                        <tr>
+                    <td>10</td>
+                    <td>GF010</td>
+                    <td class="tl">PENGANTAR GEOSPASIAL<br><em>INTRODUCTION TO GEOSPATIAL                                       </em></td>
+                    <td>2</td>
+                    <td  id="tampilnilai10" ></td>
+                </tr>
+                        <tr>
+                    <td>11</td>
+                    <td>GF011</td>
+                    <td class="tl">GEOGRAFI SOSIAL<br><em>SOCIAL GEOGRAPHY                                       </em></td>
+                    <td>2</td>
+                    <td  id="tampilnilai11" ></td>
+                </tr>
+
+                  
+         
+                <tr>
+                    <th class="tr" colspan="3">Jumlah SKS</th>
+                    <th class="tc" colspan="2" id="sks">24</th>
+                </tr>
+                <tr>
+                    <th class="tr" colspan="3">Indek Prestasi</th>
+                    <th class="tc" colspan="2" id="ip"></th>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <div align="center">
+            Yogyakarta, <script type='text/javascript'>
+    <!--
+    var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    var date = new Date();
+    var  jam = date.getHours();
+    var menit = date.getMinutes();
+    var detik = date.getSeconds();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var yy = date.getYear();
+    var year = (yy < 1000) ? yy + 1900 : yy;
+    
+    document.write(day + " " + months[month] + " " + year); 
+    //-->
+    </script><br> DAAK<br>
+            <img src="http://krs.amikom.ac.id/images/ttd-kabag-baak.png" width="150"><br> ( Armadyah Amborowati, S.Kom, M.Eng )
+        </div>
+        <br><br>
+    </div>
+    <div style="text-align:center;" class="tc">[<a href="javascript:void()" onclick="print()">CETAK</a>]</div>
+    <br><br>
+
+
+
+<script id="wappalyzer" src="khs_files/inject.js"></script>
+</div>
+</body></html>
